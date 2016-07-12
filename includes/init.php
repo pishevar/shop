@@ -4,6 +4,7 @@ session_start();
 
 
 require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/functions.php';
 
 
 spl_autoload_register(function($cn) {
@@ -12,3 +13,9 @@ spl_autoload_register(function($cn) {
         require $file;
     }
 });
+
+$loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
+ 
+$twig = new Twig_Environment($loader, array(
+    'cache' => __DIR__.'/../cache/compilation_cache',
+));

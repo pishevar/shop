@@ -1,3 +1,6 @@
 <?php
 require './includes/init.php';
-echo "hello";
+
+
+
+echo $twig->render('index.html.twig', array());

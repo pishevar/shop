@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+<?php
+
+require './includes/init.php';
+$msg="";
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+
+    $login = new login();
+    $email = escapeString($_POST['email']);
+    $password = escapeString($_POST['password']);
+    if ($login->dologin($email, $password)) {
+        
+    } else {
+        $msg="Invalid Username or password";
+    }
+}
+
+echo $twig->render('login.html.twig', array("message"=>$msg));

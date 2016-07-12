@@ -1,18 +1,21 @@
 <?php
 
-class Db extends mysqli {
+class Db{
 
     static private $db;
 
     private function __construct() {
-        parent::__construct("localhost","root","","myshop_db");
+        
     }
 
+    /**
+     * 
+     * @return MyMysqli
+     */
     static function get() {
         if (self::$db === null) {
-            self::$db = new Db();
+            self::$db = new MyMysqli("localhost", "root", "", "myshop");
         }
         return self::$db;
     }
-
 }

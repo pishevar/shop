@@ -7,28 +7,29 @@ class __TwigTemplate_7c6d160e2ed8d6ffd20dee98437a23a776f69749f392a372f76242c91ed
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 1
+        $this->parent = $this->loadTemplate("layout.html.twig", "index.html.twig", 1);
         $this->blocks = array(
+            'content' => array($this, 'block_content'),
         );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 1
-        echo "<h1>HELLO</h1>
-";
-        // line 2
-        if (((isset($context["eradat"]) ? $context["eradat"] : null) == 1)) {
-            // line 3
-            echo "
-hello ";
-            // line 4
-            echo twig_escape_filter($this->env, (isset($context["name"]) ? $context["name"] : null), "html", null, true);
-            echo "
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+    }
 
-";
-        }
+    // line 3
+    public function block_content($context, array $blocks = array())
+    {
+        // line 4
+        echo "                hello
+            ";
     }
 
     public function getTemplateName()
@@ -43,12 +44,11 @@ hello ";
 
     public function getDebugInfo()
     {
-        return array (  27 => 4,  24 => 3,  22 => 2,  19 => 1,);
+        return array (  31 => 4,  28 => 3,  11 => 1,);
     }
 }
-/* <h1>HELLO</h1>*/
-/* {% if eradat==1 %}*/
+/* {% extends "layout.html.twig" %}*/
 /* */
-/* hello {{name}}*/
-/* */
-/* {%endif %}*/
+/*             {% block content %}*/
+/*                 hello*/
+/*             {% endblock %}*/
