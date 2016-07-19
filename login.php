@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $email = escapeString($_POST['email']);
     $password = escapeString($_POST['password']);
     if ($login->dologin($email, $password)) {
-        
+        redirect("index.php");
     } else {
         $msg="Invalid Username or password";
     }

@@ -1,5 +1,6 @@
 <?php
-
+define("DEBUG",TRUE);
+define("PASSWORD_SALT", "hjdhjdfdfjhjdhf");
 session_start();
 
 
@@ -18,4 +19,6 @@ $loader = new Twig_Loader_Filesystem(__DIR__.'/../templates');
  
 $twig = new Twig_Environment($loader, array(
     'cache' => __DIR__.'/../cache/compilation_cache',
+    'debug' =>DEBUG
 ));
+$twig->addGlobal("messages",  getFlashMessage());

@@ -29,21 +29,37 @@ class __TwigTemplate_64a495d0831492dbac0b534137aca4de4cee7e4f3e05cfe2feeda22db1d
             <h1> Header</h1>
         </div>
         <div>
-
-            ";
-        // line 14
+";
+        // line 13
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["messages"]) ? $context["messages"] : null));
+        foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
+            // line 14
+            echo "    <div>
+        ";
+            // line 15
+            echo twig_escape_filter($this->env, $context["m"], "html", null, true);
+            echo "
+    </div>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['m'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 18
+        echo "            ";
         $this->displayBlock('content', $context, $blocks);
-        // line 16
+        // line 20
         echo "        </div>
     </body>
 </html>
 ";
     }
 
-    // line 14
+    // line 18
     public function block_content($context, array $blocks = array())
     {
-        // line 15
+        // line 19
         echo "            ";
     }
 
@@ -52,9 +68,14 @@ class __TwigTemplate_64a495d0831492dbac0b534137aca4de4cee7e4f3e05cfe2feeda22db1d
         return "layout.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  47 => 15,  44 => 14,  37 => 16,  35 => 14,  20 => 1,);
+        return array (  63 => 19,  60 => 18,  53 => 20,  50 => 18,  41 => 15,  38 => 14,  34 => 13,  20 => 1,);
     }
 }
 /* */
@@ -69,7 +90,11 @@ class __TwigTemplate_64a495d0831492dbac0b534137aca4de4cee7e4f3e05cfe2feeda22db1d
 /*             <h1> Header</h1>*/
 /*         </div>*/
 /*         <div>*/
-/* */
+/* {% for m in messages %}*/
+/*     <div>*/
+/*         {{m}}*/
+/*     </div>*/
+/*     {% endfor %}*/
 /*             {% block content %}*/
 /*             {% endblock %}*/
 /*         </div>*/
