@@ -45,12 +45,42 @@ function addFlashMessage($message){
     }
     $_SESSION['flash-messages'][]=$message;
 }
-function getFlashMessage(){
-    if(!isset($_SESSION['flash-messages'])){
-        return [];    
+
+function checkLogin() {
+    $login = new Login();
+    if (!$login->isLogin()) {
+        redirect(PATH);
     }
+}
+
+function checkAdmin() {
+    $login = new Login();
+    if (!$login->isGranted("ADMIN")) {
+        redirect(PATH);
+    }
+}
+
+
+function isPost(){
     
-    $messages= $_SESSION['flash-messages'];
-   $_SESSION['flash-messages']=[];
-   return $messages;
+    return ($_SERVER['REQUEST_METHOD']=="POST");
+}
+
+
+function getPostData($name){
+    return escapeString($_POST[$name]);
+    
+}
+
+function getNumParam($name, $default = 0) {
+    return (int) (isset($_GET[$name]) ? $_GET[$name] : $default);
+}
+
+function getFlashMessages() {
+    if (!isset($_SESSION['flash-messages'])) {
+        return [];
+    }
+    $messages = $_SESSION['flash-messages'];
+    $_SESSION['flash-messages'] = [];
+    return $messages;
 }
