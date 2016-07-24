@@ -87,7 +87,7 @@ $query = "INSERT INTO product SET "
             return [];
         }
     }
- public function getList($f = 0, $filter = null, $order = null) {
+    public function getList($f = 0, $filter = null, $order = null) {
         $query = "SELECT * FROM product WHERE status='visible' ";
         if ($filter !== null) {
             $query .= " AND ($filter) ";

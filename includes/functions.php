@@ -9,7 +9,7 @@ function redirect($url){
 
 function passwordHash($password){
     $p=$password . PASSWORD_SALT;
-    for($i=0;$i<5000;$i++){
+    for($i=0;$i<100;$i++){
         $p=sha1($p);
     }
     return $p;
