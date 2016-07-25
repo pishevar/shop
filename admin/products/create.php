@@ -15,7 +15,7 @@ if (isPost()) {
 
     foreach ($categories as $c) {
         $category_id = (int) $c;
-        $product->assignCategory($id, $category_id);
+        $product->adminCreateCategory($id, $category_id);
     }
 
     redirect("view.php?id=$id");

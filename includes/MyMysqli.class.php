@@ -19,12 +19,12 @@ class MyMysqli extends mysqli {
             if (DEBUG) {
                 $debugTrace = DEBUG_backtrace();
                 $errorMessage = "Db Error:" . $this->error . "\n" .
-                        "Db Error No:" . $this->errno . "\n" .
+                        "Db ErrorNo:" . $this->errno . "\n" .
                         "Query:" . $query . "\n" .
                         "file:" . $debugTrace[0]['file'] . "\n" .
                         "line:" . $debugTrace[0]['line'] . "\n";
             } else {
-                $errorMessage = "An error occured";
+                $errorMessage = "به دليل بروز خطا دوباره امتحان کنيد";
             }
             throw new Exception($errorMessage, $this->errno);
         }
