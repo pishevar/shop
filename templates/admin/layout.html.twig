@@ -8,11 +8,14 @@
     </head>
     <body>
         <div>
-            <h1>Header</h1>
+            <h1>مدیریت فروشگاه</h1>
         </div>
         <div>
             <a href="{{path}}/admin/products/index.php">محصولات</a>
-            <a href=""></a>
+            <a href="{{path}}/admin/products/create.php">اضافه کردن محصول جدید</a>
+            <a href="{{path}}/admin/products/index.php">بازگشت</a>
+            <br>
+            <br>
         </div>
         <div>
             {% for m in messages %}

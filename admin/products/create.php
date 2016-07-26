@@ -11,11 +11,13 @@ if (isPost()) {
     $price = getPostData('price');
     $quantity = getPostData('quantity');
     $categories = $_POST['categories'];
+   // $id = $product->adminCreate($sku, $name, $description, $price, $quantity);
     $id = $product->adminCreateProduct($sku, $name, $description, $price, $quantity);
 
     foreach ($categories as $c) {
         $category_id = (int) $c;
         $product->adminCreateCategory($id, $category_id);
+         //$product->assignCategory($id, $category_id);
     }
 
     redirect("view.php?id=$id");

@@ -8,5 +8,5 @@ $product = new Product();
 $id = (int) $_GET['id'];
 
 echo $twig->render("admin/products/view.html.twig", [
-    'product' => $product->adminGetCategory($id)
+    'product' => $product->adminGet($id)
 ]);

@@ -1,16 +1,17 @@
 {% extends "admin/layout.html.twig" %}
 
 {% block content %}
-    <a href="{{path}}/admin/products/create.php">افزودن</a>
+   
     <a href="{{path}}/admin/products/category-list.php">لیست دسته ها</a>
-    <table>
+    <a href="{{path}}/index.php">لیست محصولات</a>
+    <table border="2" align="center">
         <tr>
             <th>#</th>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Status</th>
+            <th>نام </th>
+            <th>دسته </th>
+            <th>قیمت</th>
+            <th>مقدار</th>
+            <th>وضعیت</th>
         </tr>
         {% for p in products %}
             <tr>

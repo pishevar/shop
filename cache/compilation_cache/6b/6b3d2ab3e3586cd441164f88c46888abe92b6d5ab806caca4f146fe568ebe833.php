@@ -51,7 +51,7 @@ class __TwigTemplate_001d4afa73e5d113b6538ced87febf51b7b0db55f43b16226b621840988
             <a href=\"view.php?id=";
             // line 10
             echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "id", array()), "html", null, true);
-            echo "\">نمایش</a>
+            echo "\">نمایش محصول</a>
         </div>
     ";
         }
@@ -87,8 +87,9 @@ class __TwigTemplate_001d4afa73e5d113b6538ced87febf51b7b0db55f43b16226b621840988
 /*             <h3>{{p.name}}</h3>*/
 /*             <div>{{p.price}}</div>*/
 /*             <a href="add2cart.php?id={{p.id}}">خرید</a>*/
-/*             <a href="view.php?id={{p.id}}">نمایش</a>*/
+/*             <a href="view.php?id={{p.id}}">نمایش محصول</a>*/
 /*         </div>*/
 /*     {% endfor %}*/
 /* */
 /* {% endblock %}*/
+/* */

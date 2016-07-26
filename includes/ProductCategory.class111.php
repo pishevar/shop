@@ -3,17 +3,17 @@
 class ProductCategory {
 
     protected $n = 10;
-
-    public function adminCreate($name, $parentId) {
-        $query = "INSERT INTO product_category SET "
+///adminCreate
+    public function adminCreateCategory($name, $parentId) {
+              $query = "INSERT INTO product_category SET "
                 . "name='$name', parent_id=$parentId";
 
         Db::get()->query($query);
 
         return Db::get()->insert_id;
     }
-
-    public function adminUpdate($id, $name, $parentId) {
+///adminUpdate
+    public function adminUpdateCategory($id, $name, $parentId) {
         $query = "UPDATE product_category SET "
                 . "name='$name', parent_id=$parentId"
                 . " WHERE id=$id ";
@@ -22,8 +22,8 @@ class ProductCategory {
 
         return Db::get()->affected_rows;
     }
-
-    public function adminGet($id) {
+///////////////adminGet
+    public function adminGetCategory($id) {
         $query = "SELECT * FROM product_category WHERE id=$id";
         $result = Db::get()->query($query);
 

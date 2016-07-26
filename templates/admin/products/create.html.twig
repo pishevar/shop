@@ -1,16 +1,18 @@
 {% extends "admin/layout.html.twig" %}
 
 {% block content %}
-
     <form action="" method="post">
-        <label>
-            SKU:
-            <input type="text" name="sku">
-        </label><br>
+    <table border="1" align="center">
+        <tr>
+            <td align="center">
         <label>
             نام محصول:
             <input type="text" name="name">
         </label><br>
+            </td>
+    </tr>
+    <tr>
+         <td align="center">
         
         <label>
             دسته:
@@ -21,21 +23,48 @@
                 {% endfor%}
             </select>
         </label><br>
+        </td>
+    </tr>
+    <tr>
+         <td align="center">
+        
         <label>
+            SKU:
+            <input type="text" name="sku">
+        </label><br>
+        <label>
+            </td>
+    </tr>
+    <tr>
+         <td align="center">
             قیمت:
             <input type="text" name="price">
         </label><br>
         <label>
+            </td>
+    </tr> 
+    <tr>
+        <td align="center">
             تعداد:
             <input type="text" name="quantity">
         </label><br>
+        </td>
+    </tr> 
+     <tr>
+         <td align="center">
         <label>
             توضیحات:
             <input type="text" name="description">
         </label><br><br>
+        </td>
+    </tr> 
+    <tr>
+        <td align="center">
         <input type="submit" value="ذخیره" >
-
+ </td>
+    </tr> 
     </form>
 
+    </table>
 
 {% endblock %}

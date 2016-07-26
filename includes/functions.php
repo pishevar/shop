@@ -57,6 +57,7 @@ function checkAdmin() {
     $login = new Login();
     if (!$login->isGranted("ADMIN")) {
         redirect(PATH);
+        addFlashMessage("You are not admin");
     }
 }
 

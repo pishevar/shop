@@ -31,7 +31,7 @@ class __TwigTemplate_983500945b3c37e230aa2490e03251dadd37b35f1a43ee196ab3b83cd16
     </head>
     <body>
         <div>
-            <h1>Header</h1>
+            <h1> فروشگاه عکس برتر</h1>
         </div>
 
         <hr>
@@ -59,11 +59,11 @@ class __TwigTemplate_983500945b3c37e230aa2490e03251dadd37b35f1a43ee196ab3b83cd16
             // line 24
             echo "                <a href=\"";
             echo twig_escape_filter($this->env, (isset($context["path"]) ? $context["path"] : null), "html", null, true);
-            echo "/login.php\">ورود</a> -
+            echo "/login.php\">ورود به سايت</a>
                 <a href=\"";
             // line 25
             echo twig_escape_filter($this->env, (isset($context["path"]) ? $context["path"] : null), "html", null, true);
-            echo "/register.php\">ثبت نام</a>
+            echo "/register.php\">ثبت نام در سايت</a>
             ";
         }
         // line 27
@@ -132,7 +132,7 @@ class __TwigTemplate_983500945b3c37e230aa2490e03251dadd37b35f1a43ee196ab3b83cd16
 /*     </head>*/
 /*     <body>*/
 /*         <div>*/
-/*             <h1>Header</h1>*/
+/*             <h1> فروشگاه عکس برتر</h1>*/
 /*         </div>*/
 /* */
 /*         <hr>*/
@@ -144,8 +144,8 @@ class __TwigTemplate_983500945b3c37e230aa2490e03251dadd37b35f1a43ee196ab3b83cd16
 /*             {% if user is defined %}*/
 /*                 <a href="{{path}}/logout.php">خروج</a>*/
 /*             {% else %}*/
-/*                 <a href="{{path}}/login.php">ورود</a> -*/
-/*                 <a href="{{path}}/register.php">ثبت نام</a>*/
+/*                 <a href="{{path}}/login.php">ورود به سايت</a>*/
+/*                 <a href="{{path}}/register.php">ثبت نام در سايت</a>*/
 /*             {% endif %}*/
 /*         </div>*/
 /*         <hr>*/

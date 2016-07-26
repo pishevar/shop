@@ -27,7 +27,7 @@ if (DEBUG) {
 }
 $twig->addGlobal("path", PATH);
 $twig->addGlobal("messages", getFlashMessages());
-//$twig->addGlobal("cart", new Cart());
+$twig->addGlobal("cart", new Cart());
 
 $login = new Login();
 if ($login->isLogin()) {
