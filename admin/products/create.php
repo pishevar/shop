@@ -16,7 +16,7 @@ if (isPost()) {
 
     foreach ($categories as $c) {
         $category_id = (int) $c;
-        $product->adminCreateCategory($id, $category_id);
+        $product->assignCategory($id, $category_id);
          //$product->assignCategory($id, $category_id);
     }
 

@@ -15,7 +15,7 @@ $query = "INSERT INTO product SET "
     
     
     //like assignCategory
-    public function adminAddCategory($productId,$categoryId){
+    public function assignCategory($productId,$category_id){
        try {
             $query = "INSERT INTO products_categories SET "
                     . "product_id=$productId, category_id=$category_id ";

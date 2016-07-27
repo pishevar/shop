@@ -30,19 +30,19 @@ class __TwigTemplate_983500945b3c37e230aa2490e03251dadd37b35f1a43ee196ab3b83cd16
         echo "/css/style.css\" rel=\"stylesheet\" type=\"text/css\">
     </head>
     <body>
-        <div>
-            <h1> فروشگاه عکس برتر</h1>
+        <div align=\"center\">
+            <h1> فروشگاه لوازم خانگی</h1>
         </div>
 
         <hr>
-        <div>
+        <div align=\"center\">
             ";
         // line 17
         if (($this->getAttribute((isset($context["cart"]) ? $context["cart"] : null), "getItemCount", array()) > 0)) {
             // line 18
-            echo "                <a href=\"cart.php\">Cart: ";
+            echo "                <label> <a href=\"cart.php\">Cart: ";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["cart"]) ? $context["cart"] : null), "getItemCount", array(), "method"), "html", null, true);
-            echo "</a>
+            echo "</a></label>
             ";
         }
         // line 20
@@ -69,7 +69,7 @@ class __TwigTemplate_983500945b3c37e230aa2490e03251dadd37b35f1a43ee196ab3b83cd16
         // line 27
         echo "        </div>
         <hr>
-        <div>
+        <div >
             ";
         // line 30
         $context['_parent'] = $context;
@@ -131,14 +131,14 @@ class __TwigTemplate_983500945b3c37e230aa2490e03251dadd37b35f1a43ee196ab3b83cd16
 /*         <link href="{{path}}/css/style.css" rel="stylesheet" type="text/css">*/
 /*     </head>*/
 /*     <body>*/
-/*         <div>*/
-/*             <h1> فروشگاه عکس برتر</h1>*/
+/*         <div align="center">*/
+/*             <h1> فروشگاه لوازم خانگی</h1>*/
 /*         </div>*/
 /* */
 /*         <hr>*/
-/*         <div>*/
+/*         <div align="center">*/
 /*             {% if cart.getItemCount>0 %}*/
-/*                 <a href="cart.php">Cart: {{cart.getItemCount()}}</a>*/
+/*                 <label> <a href="cart.php">Cart: {{cart.getItemCount()}}</a></label>*/
 /*             {% endif %}*/
 /* */
 /*             {% if user is defined %}*/
@@ -149,7 +149,7 @@ class __TwigTemplate_983500945b3c37e230aa2490e03251dadd37b35f1a43ee196ab3b83cd16
 /*             {% endif %}*/
 /*         </div>*/
 /*         <hr>*/
-/*         <div>*/
+/*         <div >*/
 /*             {% for m in messages %}*/
 /*                 <div>*/
 /*                     {{m}}*/

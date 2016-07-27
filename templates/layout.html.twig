@@ -8,14 +8,14 @@
         <link href="{{path}}/css/style.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <div>
+        <div align="center">
             <h1> فروشگاه لوازم خانگی</h1>
         </div>
 
         <hr>
-        <div>
+        <div align="center">
             {% if cart.getItemCount>0 %}
-                <a href="cart.php">Cart: {{cart.getItemCount()}}</a>
+                <label> <a href="cart.php">Cart: {{cart.getItemCount()}}</a></label>
             {% endif %}
 
             {% if user is defined %}
@@ -26,7 +26,7 @@
             {% endif %}
         </div>
         <hr>
-        <div>
+        <div >
             {% for m in messages %}
                 <div>
                     {{m}}

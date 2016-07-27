@@ -41,7 +41,7 @@ class __TwigTemplate_322909a587ad76ae3ec942c8c9492a31240cc5f16868e748411cee51ab1
             <a href=\"";
         // line 16
         echo twig_escape_filter($this->env, (isset($context["path"]) ? $context["path"] : null), "html", null, true);
-        echo "/admin/products/index.php\">بازگشت</a>
+        echo "/index.php\">بازگشت</a>
             <br>
             <br>
         </div>
@@ -112,7 +112,7 @@ class __TwigTemplate_322909a587ad76ae3ec942c8c9492a31240cc5f16868e748411cee51ab1
 /*         <div>*/
 /*             <a href="{{path}}/admin/products/index.php">محصولات</a>*/
 /*             <a href="{{path}}/admin/products/create.php">اضافه کردن محصول جدید</a>*/
-/*             <a href="{{path}}/admin/products/index.php">بازگشت</a>*/
+/*             <a href="{{path}}/index.php">بازگشت</a>*/
 /*             <br>*/
 /*             <br>*/
 /*         </div>*/
